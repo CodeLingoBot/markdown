@@ -31,7 +31,7 @@ type troffOut struct {
 	escape             *strings.Replacer
 }
 
-// Returns a formatter that writes the document in groff mm format.
+// ToGroffMM returns a formatter that writes the document in groff mm format.
 func ToGroffMM(w Writer) Formatter {
 	f := new(troffOut)
 	f.baseWriter = baseWriter{w, 2}
